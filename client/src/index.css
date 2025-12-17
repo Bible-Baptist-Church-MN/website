@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --radius-sm: 0.3rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.8rem;
+}
+
+:root {
+  /* Warm Off-White Background */
+  --background: 40 20% 98%; 
+  /* Dark Navy Text */
+  --foreground: 220 30% 20%;
+
+  /* Deep Navy Blue Primary */
+  --primary: 220 40% 25%;
+  --primary-foreground: 40 20% 98%;
+
+  /* Warm Gold/Mustard Secondary */
+  --secondary: 35 80% 55%;
+  --secondary-foreground: 220 40% 20%;
+
+  /* Soft Grey Muted */
+  --muted: 220 10% 94%;
+  --muted-foreground: 220 20% 45%;
+
+  /* Light Accent */
+  --accent: 35 30% 90%;
+  --accent-foreground: 220 40% 25%;
+
+  /* Cards */
+  --card: 0 0% 100%;
+  --card-foreground: 220 30% 20%;
+
+  /* Borders */
+  --border: 220 15% 90%;
+  --input: 220 15% 90%;
+  --ring: 220 40% 25%;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Dark Navy Background */
+  --background: 220 40% 15%;
+  --foreground: 40 20% 95%;
+
+  --primary: 220 40% 25%; /* Keep brand color */
+  --primary-foreground: 40 20% 95%;
+
+  --secondary: 35 80% 55%;
+  --secondary-foreground: 220 40% 15%;
+
+  --muted: 220 30% 20%;
+  --muted-foreground: 220 20% 70%;
+
+  --accent: 220 30% 25%;
+  --accent-foreground: 40 20% 95%;
+
+  --card: 220 35% 18%;
+  --card-foreground: 40 20% 95%;
+
+  --border: 220 30% 25%;
+  --input: 220 30% 25%;
+  --ring: 35 80% 55%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
