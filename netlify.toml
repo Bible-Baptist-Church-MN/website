@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist/public"
+
+# Redirect /studio to the Sanity Studio
+[[redirects]]
+  from = "/studio/*"
+  to = "/studio/:splat"
+  status = 200
+  force = true
+
+# Build Sanity Studio
+[build.environment]
+  NODE_VERSION = "18"
