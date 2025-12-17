@@ -40,7 +40,7 @@ async function buildAll() {
   await viteBuild();
 
   console.log("building Sanity Studio...");
-  execSync("npx sanity build dist/public/studio", { stdio: "inherit" });
+  execSync("npx sanity build dist/public/studio --yes", { stdio: "inherit" });
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
