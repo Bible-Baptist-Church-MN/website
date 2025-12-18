@@ -1,0 +1,24 @@
+
+> rest-express@1.0.0 build
+> tsx script/build.ts
+
+building client...
+[36mvite v7.3.0 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 1831 modules transformed.
+rendering chunks...
+[meta-images] no Replit deployment domain found, skipping meta tag updates
+computing gzip size...
+[2m../dist/public/[22m[32mindex.html                                          [39m[1m[2m    1.61 kB[22m[1m[22m[2m │ gzip:   0.65 kB[22m
+[2m../dist/public/[22m[32massets/open_bible_on_wooden_table-mQ-FghbJ.png      [39m[1m[2m1,265.37 kB[22m[1m[22m
+[2m../dist/public/[22m[32massets/warm_church_worship_atmosphere-JK4w_lMc.png  [39m[1m[2m1,380.78 kB[22m[1m[22m
+[2m../dist/public/[22m[32massets/youth_group_social_gathering-DRrAX7AW.png    [39m[1m[2m1,588.79 kB[22m[1m[22m
+[2m../dist/public/[22m[32massets/happy_kids_in_church_classroom-CJ8kswTQ.png  [39m[1m[2m1,740.39 kB[22m[1m[22m
+[2m../dist/public/[22m[32massets/adults_coffee_fellowship-DBiJkaZW.png        [39m[1m[2m1,755.11 kB[22m[1m[22m
+[2m../dist/public/[22m[35massets/index-CmvhXgWM.css                           [39m[1m[2m   95.28 kB[22m[1m[22m[2m │ gzip:  15.74 kB[22m
+[2m../dist/public/[22m[36massets/index-CaYkl0n7.js                            [39m[1m[2m  365.33 kB[22m[1m[22m[2m │ gzip: 116.17 kB[22m
+[32m✓ built in 3.40s[39m
+building Sanity Studio...
+- Clean output folder
+✓ Clean output folder (20ms)
+- Build Sanity Studio
