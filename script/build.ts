@@ -1,6 +1,6 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile } from "fs/promises";
+import { rm, readFile, cp } from "fs/promises";
 import { execSync } from "child_process";
 
 // server deps to bundle to reduce openat(2) syscalls
@@ -41,6 +41,9 @@ async function buildAll() {
 
   console.log("building Sanity Studio...");
   execSync("npx sanity build dist/public/studio --yes", { stdio: "inherit" });
+
+  console.log("copying Sanity static assets to root...");
+  await cp("dist/public/studio/static", "dist/public/static", { recursive: true });
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));

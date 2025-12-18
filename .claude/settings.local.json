@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(npm run build:*)",
+      "Bash(tee:*)",
+      "Bash(curl:*)",
+      "Bash(cat:*)",
+      "Bash(npx sanity build --help:*)"
     ]
   }
 }
